@@ -3,9 +3,10 @@ const cors = require('cors')
 const app = express()
 const port = process.env.PORT || 5000 ;
 const chefData = require("./Data/chef.json")
-app.use(cors())
 
-app.get('/foodData', (req, res)=>{
+app.use( cors() )
+
+app.get('/chefData', (req, res)=>{
      res.send(chefData)
 })
 
